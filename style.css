@@ -1,0 +1,57 @@
+
+/* general*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* navigation style*/
+
+nav {
+    background-color: #100669;
+    border-color: red;
+    overflow: auto;
+    padding: 10px;
+    /*
+    max-width: 1200px;
+    margin: 0 auto;
+    maakt nav header wat smaller, oogt mooi op witte achtergrond
+    */
+
+}
+
+.nav-logo {
+    width: 180px;
+    float: left;
+    /*padding-top: 10px; /* lijkt bij mijn logo het lelijker maken*/
+}
+
+.nav-logo img {
+    width: 100%;
+}
+
+.nav-items{
+    display: inline-block;
+    float: right;
+    padding-top: 10px;
+}
+
+.nav-items ul {
+    padding: 0;
+}
+
+.nav-items ul li {
+    display: inline-block;
+    margin: 0 5px 0 5px;
+
+}
+
+.nav-items ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+.nav-items ul li a:hover {
+    color: #796fd6
+}
