@@ -33,7 +33,7 @@ nav {
 .nav-items{
     display: inline-block;
     float: right;
-    padding-top: 10px;
+    padding-top: 10px; /* eigen aanpassing, momenteel bij dit logo mooier*/
 }
 
 .nav-items ul {
@@ -54,4 +54,38 @@ nav {
 
 .nav-items ul li a:hover {
     color: #796fd6
+}
+
+/*header style*/
+
+header{
+    background: url("./images/header.png");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    position: relative;
+    text-align: center;
+    font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+header .header-text{
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+    margin: auto;
+    max-width: 500px;
+    max-height: 240px;
+    padding: 40px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header .header-arrow{
+    position: absolute;
+    bottom: 40px;
+
 }
