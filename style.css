@@ -1,5 +1,9 @@
 
 /* general*/
+body {
+    background-color: lavender;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -21,10 +25,13 @@ nav {
 
 }
 
+nav .container{
+    text-align:center;
+}
+
 .nav-logo {
     width: 180px;
-    float: left;
-    /*padding-top: 10px; /* lijkt bij mijn logo het lelijker maken*/
+    margin: 0 auto;
 }
 
 .nav-logo img {
@@ -32,9 +39,7 @@ nav {
 }
 
 .nav-items{
-    display: inline-block;
-    float: right;
-    padding-top: 10px; /* eigen aanpassing, momenteel bij dit logo mooier*/
+    display: inline-block;    
 }
 
 .nav-items ul {
@@ -57,6 +62,19 @@ nav {
     color: #796fd6
 }
 
+
+@media screen and (min-width: 1000px){ /* eigen aanpassing min-width gezien hoeveelheid links bovenaan*/
+    .nav-logo{
+        float: left;
+        /*padding-top: 10px; /* lijkt bij mijn logo het lelijker maken*/
+    }
+
+    .nav-items {
+        float: right;
+        padding-top: 10px; /* eigen aanpassing, momenteel bij dit logo mooier*/
+    }
+}
+
 /*header style*/
 
 header{
@@ -65,7 +83,7 @@ header{
     background-position: center;
     margin-top: 20px; /* margin en padding top en left zelf toegevoegd, oogt rustiger*/
     padding-top: 80px;
-    margin-left: 20px;
+    margin: 10px auto;
     height: 70vh; /* volgens skillshare voorbeeld 80*/
     position: relative;
     text-align: center;
@@ -91,6 +109,14 @@ header .header-text{
 header .header-arrow{
     position: absolute;
     bottom: 40px;
+    left: 50%;
+    margin-left: -25px;
+}
+
+@media screen and (min-width: 686px) {
+    header {
+        margin-left: 20px;
+    }
 }
 
 /* main - portfolio*/
@@ -99,17 +125,28 @@ header .header-arrow{
     padding: 40px 0;
 }
 
+.portfolio .container {
+    background-color: #f8f6f6;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.portfolio .container h2 {
+    padding-top: 30px;
+    color: #100669;
+}
+
 .portfolio .item-container {
     display: inline-block;
     margin: 40px 0;
-    width: 49%;
+    width: 100%;
 }
 .portfolio .item-container .portfolio-item {
     background: url("./images/portfolio-item.jpg");
     background-size: cover;
     background-position: center;
-    height:450px;
-    width: 450px;
+    height: 275px;
+    width: 275px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -160,18 +197,32 @@ header .header-arrow{
     display: block;
 }
 
+@media screen and (min-width: 1000px) {
+    .portfolio .item-container {
+        width: 49%;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .portfolio .item-container .portfolio-item {
+        height:450px;
+        width: 450px;
+    }
+}
+
 /* about */
 
 .about {
     padding: 20px 0 20px 0; /* own add, to balance*/
     background: #f8f6f6;
     font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    text-align: center;
 }
 
 .profile-image-container {
     display: inline-block;
     width: 38%;
-    text-align: right;
+    text-align: center;
 }
 
 .profile-image {
@@ -181,13 +232,37 @@ header .header-arrow{
 }
 
 .profile-text-container {
-    display: inline-block;
-    width: 60%;
-    float: right;
+    text-align: center;
 }
+
 .profile-text-container p {
-    max-width: 500px;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media screen and (min-width: 1000px){
+    .about {
+        text-align: left;
+    }
+
+    .profile-image-container {
+        text-align: right;
+    }
+
+    .profile-text-container {
+        width: 60%;
+        float: right;
+        padding-left: 10px;
+        display: inline-block;
+        text-align: left;
+    }
+
+    .profile-text-container p {
+        text-align: left;
+        max-width: 500px;
+        margin: 0;
+    }
 }
 
 /* footer */
