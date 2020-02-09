@@ -190,3 +190,24 @@ header .header-arrow{
     width: 100%;
 }
 
+/* footer */
+
+footer {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact-text {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a{
+    margin: 10px; /* found this one out myself*/
+    text-decoration: none;
+}
