@@ -12,6 +12,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    border: 1px dotted green;
 }
 
 /* navigation style*/
@@ -19,8 +20,14 @@ body {
 nav {
     background-color: #100669;
     overflow: auto;
+    position: fixed;
+    width: auto;
     padding: 10px;
     margin-top: 10px;
+    z-index: 9999;
+    top: -10px;
+    left: 0px;
+    right: 0px;
 }
 
 nav .container{
@@ -73,46 +80,72 @@ nav .container{
 
 /*header style*/
 
-header{
-    background: url("./images/header_bg.png");
-    background-size: cover;
+header {
+    padding-top: 75px;
+    max-height: 400px;
+}
+
+header .container{
+    /* border: 1px solid red; */
+    background: url(./images/header_bg.png);
+    background-size: 100%;
     background-position: center;
-    margin-top: 20px; 
-    padding-top: 80px;
+    background-repeat: no-repeat;
+    padding-top: 20px;
     margin: 10px auto;
-    height: 70vh; 
+    width: 100%;
+    height: 500px;
     position: relative;
     text-align: center;
 }
 
-header .header-text{
+header .header-text {
     background-color: #0a0441;
     opacity: 0.8;
     color: white;
     margin: auto;
-    max-width: 500px;
-    max-height: 220px;
-    padding: 40px;
+    max-width: 400px;
+    max-height: 200px;
+    padding: 20px;
     text-align: center;
     position: absolute;
     bottom: 0;
     top: 0;
     left: 0;
     right: 0;
+    /* margin = uitlijnen van blauwe kader, padding is text binnen kader */
 }
 
-header .header-arrow{
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    margin-left: -25px;
+header .header-arrow {
+    visibility: hidden;
 }
 
 @media screen and (min-width: 686px) {
     header {
-        margin-left: 20px;
+        margin-left: 15px;
     }
 }
+
+@media screen and (min-width: 1000px) {
+    header {
+        max-height: none;
+    }
+
+    header .container{
+        /*height: 80vh;*/
+        background-size: 100%;
+    }
+
+    header .header-arrow {
+        visibility: visible;
+        position: absolute;
+        bottom: 55px;
+        margin-left: -25px;
+    }
+}
+
+
+
 
 /* main - portfolio*/
 
@@ -135,6 +168,7 @@ header .header-arrow{
     margin: 40px 0;
     width: 100%;
 }
+
 .portfolio .item-container .portfolio-item {
     background: url("./images/portfolio-item.jpg");
     background-size: cover;
@@ -175,7 +209,7 @@ header .header-arrow{
     opacity: 0.8;
     padding: 10px 0px;
     position: absolute;
-    bottom: -140px;
+    bottom: -155px;
     width: 100%;
     transition: transform 0.4s ease;
     
