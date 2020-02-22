@@ -1,0 +1,315 @@
+
+/* general*/
+
+* {
+    font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: #f4faff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px dotted green;
+}
+
+/* navigation style*/
+
+nav {
+    background-color: #100669;
+    overflow: auto;
+    position: fixed;
+    width: auto;
+    padding: 10px;
+    margin-top: 10px;
+    z-index: 9999;
+    top: -10px;
+    left: 0px;
+    right: 0px;
+}
+
+nav .container{
+    text-align:center;
+}
+
+.nav-logo {
+    width: 180px;
+    margin: 0 auto;
+}
+
+.nav-logo img {
+    width: 100%;
+}
+
+.nav-items{
+    display: inline-block;    
+}
+
+.nav-items ul {
+    padding: 0;
+}
+
+.nav-items ul li {
+    display: inline-block;
+    margin: 0 5px 0 5px;
+
+}
+
+.nav-items ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-items ul li a:hover {
+    color: #796fd6
+}
+
+
+@media screen and (min-width: 1000px){
+    .nav-logo{
+        float: left;
+    }
+
+    .nav-items {
+        float: right;
+        padding-top: 10px; 
+    }
+}
+
+/*header style*/
+
+header {
+    padding-top: 75px;
+    max-height: 400px;
+}
+
+header .container{
+    /* border: 1px solid red; */
+    background: url(./images/header_bg.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 20px;
+    margin: 10px auto;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    text-align: center;
+}
+
+header .header-text {
+    background-color: #0a0441;
+    opacity: 0.8;
+    color: white;
+    margin: auto;
+    max-width: 400px;
+    max-height: 200px;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* margin = uitlijnen van blauwe kader, padding is text binnen kader */
+}
+
+header .header-arrow {
+    visibility: hidden;
+}
+
+@media screen and (min-width: 686px) {
+    header {
+        margin-left: 15px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    header {
+        max-height: none;
+    }
+
+    header .container{
+        /*height: 80vh;*/
+        background-size: 100%;
+    }
+
+    header .header-arrow {
+        visibility: visible;
+        position: absolute;
+        bottom: 55px;
+        margin-left: -25px;
+    }
+}
+
+
+
+
+/* main - portfolio*/
+
+.portfolio {
+    padding: 40px 0;
+}
+
+.portfolio .container {
+    /*background-color: #dcedff;*/
+    text-align: center;
+}
+
+.portfolio .container h2 {
+    padding-top: 30px;
+    color: #0d3b66;
+}
+
+.portfolio .item-container {
+    display: inline-block;
+    margin: 40px 0;
+    width: 100%;
+}
+
+.portfolio .item-container .portfolio-item {
+    background: url("./images/portfolio-item.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 275px;
+    width: 275px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio .item-container .portfolio-item.IT{
+    background: url("./images/tic-tac-toe-screenshot.PNG");
+    /* heb bij de andere size en position toegevoegd, omdat anders dit niet mee ging */
+}
+
+.portfolio .item-container .portfolio-item.medisch{
+    background: url("./images/arts.jpg");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.portfolio .item-container .portfolio-item.crea{
+    background: url("./images/portfolio-item.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio .item-container .portfolio-item.photo{
+    background: url("./images/photo-vierkant.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio .item-container .portfolio-description {
+    background-color: black;
+    opacity: 0.8;
+    padding: 10px 0px;
+    position: absolute;
+    bottom: -155px;
+    width: 100%;
+    transition: transform 0.4s ease;
+    
+}
+
+.portfolio .item-container .portfolio-description a {
+    color: white;
+    text-decoration: none;
+}
+
+.portfolio-item:hover .portfolio-description{
+    transform: translateY(-140px);
+    transition: transform 0.4s ease;
+    display: block;
+}
+
+@media screen and (min-width: 1000px) {
+    .portfolio .item-container {
+        width: 49%;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .portfolio .item-container .portfolio-item {
+        height:450px;
+        width: 450px;
+    }
+}
+
+/* about */
+
+.about {
+    padding: 20px 0 20px 0; 
+    background: #dcedff;
+    text-align: center;
+}
+
+.profile-image-container {
+    display: inline-block;
+    width: 38%;
+    text-align: center;
+}
+
+.profile-image {
+    border-radius: 50%;
+    max-width: 250px;
+    width: 100%;
+}
+
+.profile-text-container {
+    text-align: center;
+}
+
+.profile-text-container p {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media screen and (min-width: 1000px){
+    .about {
+        text-align: left;
+    }
+
+    .profile-image-container {
+        text-align: right;
+    }
+
+    .profile-text-container {
+        width: 60%;
+        float: right;
+        padding-left: 10px;
+        display: inline-block;
+        text-align: left;
+    }
+
+    .profile-text-container p {
+        text-align: left;
+        max-width: 500px;
+        margin: 0;
+    }
+}
+
+/* footer */
+
+footer {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact-text {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a{
+    margin: 10px; 
+    text-decoration: none;
+}
