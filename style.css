@@ -85,12 +85,9 @@ header {
     max-height: 400px;
 }
 
-header .container{
+header .container {
     /* border: 1px solid red; */
-    background: url(./images/header_bg.png);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+
     padding-top: 20px;
     margin: 10px auto;
     width: 100%;
@@ -99,14 +96,28 @@ header .container{
     text-align: center;
 }
 
+#index header .container {
+    background: url(./images/header_bg.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#about-me header .container {
+    background: url(./images/header-about-me.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 header .header-text {
     background-color: #0a0441;
     opacity: 0.8;
     color: white;
-    margin: auto;
+    
     max-width: 400px;
     max-height: 200px;
-    padding: 20px;
+    
     text-align: center;
     position: absolute;
     bottom: 0;
@@ -114,6 +125,16 @@ header .header-text {
     left: 0;
     right: 0;
     /* margin = uitlijnen van blauwe kader, padding is text binnen kader */
+}
+
+#index header .header-text {
+    margin: auto;
+    padding: 20px;
+}
+
+#about-me header .header-text {
+    margin: auto 45px;
+    padding: 0px;
 }
 
 header .header-arrow {
@@ -136,11 +157,22 @@ header .header-arrow {
         background-size: 100%;
     }
 
+    #about-me header .header-text {
+        margin: auto 45px;
+        padding: 0px;
+    }
+
     header .header-arrow {
         visibility: visible;
         position: absolute;
         bottom: 55px;
         margin-left: -25px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #about-me header .header-text {
+        margin: auto 15%;
     }
 }
 
